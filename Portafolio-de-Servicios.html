@@ -1,0 +1,444 @@
+<html>
+  <body>
+    <header>
+
+      <meta charset="UTF-8">
+      <title>Catch Dreams</title>
+<style >
+
+  body {background- color: black;padding:30px;font-family: times new roman;}
+
+    #menu{
+     background-color: #d6deef;
+    }
+
+    #menu ul { 
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    #menu ul li{
+
+      display: inline-block;
+    }
+ #menu ul li a {
+    color:#304682;
+    display: block;
+    padding: 10px 60px ;
+    text-decoration: none;
+
+ }
+
+ #menu ul li a:hover {
+    background-color: #e5b3bd;
+ 
+ }
+
+ .item-r {   
+float: right;
+  }
+
+  
+</style>
+    <hr>
+<img src="Banner.png" width="1400" height="200" />
+<hr>
+    <div id="menu">
+       <ul> 
+                <li class="item-y"><a href="index.html">Inicio</a></li>
+                <li class="item-y"><a href="QuienesSomos.html">Quienes Somos</a></li>
+                <li class="item-y"><a href="Portafolio-de-Servicios.html">Portafolio de Servicios</a></li>
+                <li class="item-r"><a href="Contacto.html">Contacto</a></li>
+                <li class="item-r"><a href="Producto.html">Producto</a></li>
+            </ul>
+      </div>
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fondo con Gradiente Suave</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            /* Gradiente suave con los tres colores */
+            background: linear-gradient(135deg, 
+                #ffffff 0%, 
+                #9bb0de 50%, 
+                #e995ba 100%);
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .info-box {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 500px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .colors {
+            display: flex;
+            justify-content: space-around;
+            margin: 25px 0;
+        }
+
+        .color-sample {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .white {
+            background-color: #ffffff;
+            color: #333;
+            border: 1px solid #eee;
+        }
+
+        .blue {
+            background-color: #9bb0de;
+            color: white;
+        }
+
+        .pink {
+            background-color: #e995ba;
+            color: white;
+        }
+
+        p {
+            color: #444;
+            line-height: 1.6;
+        }
+  
+</html>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Fotografías</title>
+    <style>
+        /* Estilos generales - NO AFECTAN EL FONDO EXISTENTE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            font-weight: 300;
+            font-size: 2.5rem;
+        }
+        
+        /* Galería */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .gallery-item {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .gallery-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .gallery-title {
+            padding: 15px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .modal.active {
+            opacity: 1;
+        }
+        
+        .modal-content {
+            background-color: white;
+            border-radius: 15px;
+            max-width: 800px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+        
+        .modal.active .modal-content {
+            transform: scale(1);
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 28px;
+            cursor: pointer;
+            color: #333;
+            background: rgba(255, 255, 255, 0.8);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+            transition: all 0.2s ease;
+        }
+        
+        .modal-close:hover {
+            background: white;
+            transform: rotate(90deg);
+        }
+        
+        .modal-image {
+            width: 100%;
+            max-height: 500px;
+            object-fit: contain;
+            display: block;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+        
+        .modal-text {
+            padding: 25px;
+        }
+        
+        .modal-title {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .modal-description {
+            color: #555;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .modal-content {
+                width: 95%;
+            }
+            
+            .modal-image {
+                max-height: 350px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Portafolio de Servicios </h1>
+        
+        <div class="gallery">
+            <!-- Elemento 1 -->
+            <div class="gallery-item" data-id="1">
+                <img src="isa.JPEG" alt="Fotografías de época" class="gallery-img">
+                <div class="gallery-title">Fotografías de época</div>
+            </div>
+            
+            <!-- Elemento 2 -->
+            <div class="gallery-item" data-id="2">
+                <img src="FT18.jpeg" alt="Fotografías de fantasía" class="gallery-img">
+                <div class="gallery-title">Fotografías de fantasía</div>
+            </div>
+            
+            <!-- Elemento 3 -->
+            <div class="gallery-item" data-id="3">
+                <img src="FT9.png" alt="Fotografía con de marcación de color" class="gallery-img">
+                <div class="gallery-title">Fotografía con de marcación de color</div>
+            </div>
+            
+            <!-- Elemento 4 -->
+            <div class="gallery-item" data-id="4">
+                <img src="FT20.jpeg" alt="Fotografías diferentes" class="gallery-img">
+                <div class="gallery-title">Fotografías diferentes</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal" id="imageModal">
+        <div class="modal-content">
+            <span class="modal-close" id="modalClose">&times;</span>
+            <img class="modal-image" id="modalImage" src="" alt="">
+            <div class="modal-text">
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <p class="modal-description" id="modalDescription"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Datos para las imágenes y descripciones
+        const imageData = {
+            1: {
+                title: "Fotografías de época",
+                image: "isa.JPEG",
+                description: "Una colección de fotografías que capturan la esencia de tiempos pasados o futuristas, que transportan al espectador a otra era."
+            },
+            2: {
+                title: "Fotografías de fantasía",
+                image: "FT18.jpeg",
+                description: "Imágenes que exploran mundos imaginarios, combinando realidad y fantasía para crear escenas mágicas."
+            },
+            3: {
+                title: "Fotografía con de marcación de color",
+                image: "FT9.png",
+                description: "Técnica fotográfica que utiliza áreas definidas de color para crear contraste."
+            },
+            4: {
+                title: "Fotografías diferentes",
+                image: "FT20.jpeg",
+                description: "en caso de no encontrar encantadoras las fotografias anteriores,puedes pedir nuvas creaciones."
+            }
+        };
+
+        // Elementos del DOM
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const modal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDescription = document.getElementById('modalDescription');
+        const modalClose = document.getElementById('modalClose');
+
+        // Abrir modal al hacer clic en un elemento de la galería
+        galleryItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const id = this.getAttribute('data-id');
+                const data = imageData[id];
+                
+                modalImage.src = data.image;
+                modalImage.alt = data.title;
+                modalTitle.textContent = data.title;
+                modalDescription.textContent = data.description;
+                
+                // Mostrar modal con animación
+                modal.style.display = 'flex';
+                setTimeout(() => {
+                    modal.classList.add('active');
+                }, 10);
+            });
+        });
+
+        // Cerrar modal
+        function closeModal() {
+            modal.classList.remove('active');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300);
+        }
+
+        // Cerrar modal al hacer clic en la X
+        modalClose.addEventListener('click', closeModal);
+
+        // Cerrar modal al hacer clic fuera del contenido
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Cerrar modal con la tecla Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
